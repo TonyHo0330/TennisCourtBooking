@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 900px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+.table {
+    margin-top: 15px;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.booked {
+    background-color: #f8d7da;
+    color: #721c24;
+    font-weight: bold;
+}
+
+.available {
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+}

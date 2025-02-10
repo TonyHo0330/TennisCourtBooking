@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>球場狀態控制</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/courtsUpdate.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center mt-4">🏟️ 球場狀態控制</h2>
+        <p class="text-center text-muted">透過開關控制球場的開放狀態</p>
+
+        <div class="table-responsive">
+            <table class="table table-bordered text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>球場名稱</th>
+                        <th>開放狀態</th>
+                    </tr>
+                </thead>
+                <tbody id="courtsTableBody">
+                    <!-- 透過 JavaScript 動態填入 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/courtsUpdate.js') }}"></script>
+</body>
+
+</html>

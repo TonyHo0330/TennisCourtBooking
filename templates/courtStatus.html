@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>場地預約狀況</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/courtStatus.css') }}">
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center mt-3">場地預約狀況</h2>
+
+        <label for="date" class="form-label">選擇日期：</label>
+        <input type="date" id="date" class="form-control">
+
+        <label for="venue" class="form-label mt-3">選擇場地：</label>
+        <select id="venue" class="form-select">
+            <option value="">請選擇場地</option>
+        </select>
+
+        <button class="btn btn-primary w-100 mt-3" onclick="fetchReservations()">查看場地狀況</button>
+
+        <!-- 預約狀況表格 -->
+        <div id="reservationStatus" class="mt-4 d-none">
+            <h4 class="text-center" id="timeCourt"></h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>時段</th>
+                        <th>預約狀況</th>
+                    </tr>
+                </thead>
+                <tbody id="statusTableBody">
+                    <!-- JavaScript 動態插入 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/courtStatus.js') }}"></script>
+</body>
+
+</html>
